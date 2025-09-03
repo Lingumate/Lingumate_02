@@ -1,0 +1,344 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: hsl(35, 25%, 97%);
+  --foreground: hsl(220, 15%, 25%);
+  --muted: hsl(35, 25%, 95%);
+  --muted-foreground: hsl(220, 15%, 45%);
+  --popover: hsl(0, 0%, 100%);
+  --popover-foreground: hsl(220, 15%, 25%);
+  --card: hsl(0, 0%, 100%);
+  --card-foreground: hsl(220, 15%, 25%);
+  --border: hsl(35, 25%, 90%);
+  --input: hsl(35, 25%, 90%);
+  --primary: hsl(200, 60%, 50%);
+  --primary-foreground: hsl(0, 0%, 100%);
+  --secondary: hsl(35, 25%, 95%);
+  --secondary-foreground: hsl(220, 15%, 25%);
+  --accent: hsl(35, 25%, 95%);
+  --accent-foreground: hsl(220, 15%, 25%);
+  --destructive: hsl(0, 84.2%, 60.2%);
+  --destructive-foreground: hsl(0, 0%, 100%);
+  --ring: hsl(200, 60%, 50%);
+  --radius: 0.75rem;
+  
+  /* Custom colors - pleasant tourism and nature inspired */
+  --ocean: hsl(195, 70%, 60%);
+  --sand: hsl(45, 80%, 75%);
+  --forest: hsl(120, 40%, 55%);
+  --coral: hsl(15, 70%, 65%);
+  --sky: hsl(210, 80%, 70%);
+  --sage: hsl(100, 30%, 65%);
+  --peach: hsl(25, 80%, 75%);
+  --lavender: hsl(260, 40%, 75%);
+}
+
+.dark {
+  --background: hsl(220, 15%, 10%);
+  --foreground: hsl(200, 20%, 95%);
+  --muted: hsl(220, 15%, 15%);
+  --muted-foreground: hsl(200, 20%, 70%);
+  --popover: hsl(220, 15%, 10%);
+  --popover-foreground: hsl(200, 20%, 95%);
+  --card: hsl(220, 15%, 10%);
+  --card-foreground: hsl(200, 20%, 95%);
+  --border: hsl(220, 15%, 15%);
+  --input: hsl(220, 15%, 15%);
+  --primary: hsl(200, 60%, 60%);
+  --primary-foreground: hsl(220, 15%, 10%);
+  --secondary: hsl(220, 15%, 15%);
+  --secondary-foreground: hsl(200, 20%, 95%);
+  --accent: hsl(220, 15%, 15%);
+  --accent-foreground: hsl(200, 20%, 95%);
+  --destructive: hsl(0, 62.8%, 30.6%);
+  --destructive-foreground: hsl(200, 20%, 95%);
+  --ring: hsl(200, 60%, 60%);
+  --radius: 0.75rem;
+  
+  /* Custom colors for dark mode */
+  --ocean: hsl(195, 70%, 70%);
+  --sand: hsl(45, 80%, 85%);
+  --forest: hsl(120, 40%, 65%);
+  --coral: hsl(15, 70%, 75%);
+  --sky: hsl(210, 80%, 80%);
+  --sage: hsl(100, 30%, 75%);
+  --peach: hsl(25, 80%, 85%);
+  --lavender: hsl(260, 40%, 85%);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+  }
+}
+
+@layer utilities {
+  .text-primary {
+    color: var(--primary);
+  }
+  
+  .bg-primary {
+    background-color: var(--primary);
+  }
+  
+  .text-ocean {
+    color: var(--ocean);
+  }
+  
+  .bg-ocean {
+    background-color: var(--ocean);
+  }
+  
+  .text-sand {
+    color: var(--sand);
+  }
+  
+  .bg-sand {
+    background-color: var(--sand);
+  }
+  
+  .text-forest {
+    color: var(--forest);
+  }
+  
+  .bg-forest {
+    background-color: var(--forest);
+  }
+  
+  .text-coral {
+    color: var(--coral);
+  }
+  
+  .bg-coral {
+    background-color: var(--coral);
+  }
+  
+  .text-sky {
+    color: var(--sky);
+  }
+  
+  .bg-sky {
+    background-color: var(--sky);
+  }
+  
+  .text-sage {
+    color: var(--sage);
+  }
+  
+  .bg-sage {
+    background-color: var(--sage);
+  }
+  
+  .text-peach {
+    color: var(--peach);
+  }
+  
+  .bg-peach {
+    background-color: var(--peach);
+  }
+  
+  .text-lavender {
+    color: var(--lavender);
+  }
+  
+  .bg-lavender {
+    background-color: var(--lavender);
+  }
+  
+  .hover\:bg-primary\/90:hover {
+    background-color: hsl(from var(--primary) h s l / 0.9);
+  }
+  
+  .hover\:bg-ocean\/90:hover {
+    background-color: hsl(from var(--ocean) h s l / 0.9);
+  }
+  
+  .hover\:bg-sand\/90:hover {
+    background-color: hsl(from var(--sand) h s l / 0.9);
+  }
+  
+  .hover\:bg-forest\/90:hover {
+    background-color: hsl(from var(--forest) h s l / 0.9);
+  }
+  
+  .hover\:bg-coral\/90:hover {
+    background-color: hsl(from var(--coral) h s l / 0.9);
+  }
+  
+  .hover\:bg-sky\/90:hover {
+    background-color: hsl(from var(--sky) h s l / 0.9);
+  }
+  
+  .hover\:bg-sage\/90:hover {
+    background-color: hsl(from var(--sage) h s l / 0.9);
+  }
+  
+  .hover\:bg-peach\/90:hover {
+    background-color: hsl(from var(--peach) h s l / 0.9);
+  }
+  
+  .hover\:bg-lavender\/90:hover {
+    background-color: hsl(from var(--lavender) h s l / 0.9);
+  }
+  
+  .bg-primary\/10 {
+    background-color: hsl(from var(--primary) h s l / 0.1);
+  }
+  
+  .bg-ocean\/10 {
+    background-color: hsl(from var(--ocean) h s l / 0.1);
+  }
+  
+  .bg-sand\/10 {
+    background-color: hsl(from var(--sand) h s l / 0.1);
+  }
+  
+  .bg-forest\/10 {
+    background-color: hsl(from var(--forest) h s l / 0.1);
+  }
+  
+  .bg-coral\/10 {
+    background-color: hsl(from var(--coral) h s l / 0.1);
+  }
+  
+  .bg-sky\/10 {
+    background-color: hsl(from var(--sky) h s l / 0.1);
+  }
+  
+  .bg-sage\/10 {
+    background-color: hsl(from var(--sage) h s l / 0.1);
+  }
+  
+  .bg-peach\/10 {
+    background-color: hsl(from var(--peach) h s l / 0.1);
+  }
+  
+  .bg-lavender\/10 {
+    background-color: hsl(from var(--lavender) h s l / 0.1);
+  }
+  
+  /* Nature-inspired gradients */
+  .bg-gradient-ocean {
+    background: linear-gradient(135deg, hsl(195, 70%, 60%) 0%, hsl(210, 80%, 70%) 100%);
+  }
+  
+  .bg-gradient-sunset {
+    background: linear-gradient(135deg, hsl(25, 80%, 75%) 0%, hsl(15, 70%, 65%) 100%);
+  }
+  
+  .bg-gradient-forest {
+    background: linear-gradient(135deg, hsl(120, 40%, 55%) 0%, hsl(100, 30%, 65%) 100%);
+  }
+  
+  .bg-gradient-sky {
+    background: linear-gradient(135deg, hsl(210, 80%, 70%) 0%, hsl(195, 70%, 60%) 100%);
+  }
+  
+  .bg-gradient-beach {
+    background: linear-gradient(135deg, hsl(45, 80%, 75%) 0%, hsl(195, 70%, 60%) 100%);
+  }
+  
+  .bg-gradient-meadow {
+    background: linear-gradient(135deg, hsl(100, 30%, 65%) 0%, hsl(120, 40%, 55%) 100%);
+  }
+  
+  .bg-gradient-dawn {
+    background: linear-gradient(135deg, hsl(260, 40%, 75%) 0%, hsl(25, 80%, 75%) 100%);
+  }
+  
+  .bg-gradient-travel {
+    background: linear-gradient(135deg, hsl(195, 70%, 60%) 0%, hsl(120, 40%, 55%) 50%, hsl(45, 80%, 75%) 100%);
+  }
+  
+  /* Persuasive and pleasing background gradients */
+  .bg-gradient-warm {
+    background: linear-gradient(135deg, hsl(35, 25%, 97%) 0%, hsl(45, 30%, 95%) 50%, hsl(25, 20%, 98%) 100%);
+  }
+  
+  .bg-gradient-sunrise {
+    background: linear-gradient(135deg, hsl(25, 80%, 95%) 0%, hsl(45, 80%, 90%) 50%, hsl(195, 70%, 85%) 100%);
+  }
+  
+  .bg-gradient-golden {
+    background: linear-gradient(135deg, hsl(45, 80%, 90%) 0%, hsl(35, 70%, 92%) 50%, hsl(25, 60%, 94%) 100%);
+  }
+  
+  .bg-gradient-soft {
+    background: linear-gradient(135deg, hsl(35, 25%, 97%) 0%, hsl(45, 20%, 96%) 50%, hsl(55, 15%, 98%) 100%);
+  }
+  
+  .bg-gradient-inviting {
+    background: linear-gradient(135deg, hsl(25, 30%, 96%) 0%, hsl(35, 25%, 97%) 50%, hsl(45, 20%, 98%) 100%);
+  }
+  
+  /* Subtle background patterns */
+  .bg-pattern-waves {
+    background-image: 
+      radial-gradient(circle at 25% 25%, hsl(195, 70%, 60%, 0.08) 0%, transparent 50%),
+      radial-gradient(circle at 75% 75%, hsl(120, 40%, 55%, 0.08) 0%, transparent 50%),
+      radial-gradient(circle at 50% 50%, hsl(45, 80%, 75%, 0.05) 0%, transparent 50%);
+  }
+  
+  .bg-pattern-nature {
+    background-image: 
+      radial-gradient(circle at 20% 20%, hsl(195, 70%, 60%, 0.06) 0%, transparent 50%),
+      radial-gradient(circle at 80% 80%, hsl(120, 40%, 55%, 0.06) 0%, transparent 50%),
+      radial-gradient(circle at 40% 60%, hsl(45, 80%, 75%, 0.04) 0%, transparent 50%);
+  }
+  
+  .bg-pattern-travel {
+    background-image: 
+      linear-gradient(45deg, hsl(195, 70%, 60%, 0.03) 25%, transparent 25%),
+      linear-gradient(-45deg, hsl(120, 40%, 55%, 0.03) 25%, transparent 25%),
+      linear-gradient(45deg, transparent 75%, hsl(45, 80%, 75%, 0.03) 75%),
+      linear-gradient(-45deg, transparent 75%, hsl(210, 80%, 70%, 0.03) 75%);
+    background-size: 40px 40px;
+    background-position: 0 0, 0 20px, 20px -20px, -20px 0px;
+  }
+  
+  .bg-pattern-soft {
+    background-image: 
+      radial-gradient(circle at 30% 30%, hsl(25, 80%, 75%, 0.04) 0%, transparent 50%),
+      radial-gradient(circle at 70% 70%, hsl(45, 80%, 75%, 0.04) 0%, transparent 50%),
+      radial-gradient(circle at 50% 50%, hsl(35, 70%, 85%, 0.03) 0%, transparent 50%);
+  }
+  
+  /* Soft glassmorphism effects */
+  .glass-soft {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+  }
+  
+  .glass-nature {
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(195, 70%, 60%, 0.1);
+  }
+  
+  /* Gentle floating animation */
+  .float-gentle {
+    animation: floatGentle 8s ease-in-out infinite;
+  }
+  
+  @keyframes floatGentle {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+  }
+  
+  /* Soft pulse animation */
+  .pulse-soft {
+    animation: pulseSoft 3s ease-in-out infinite;
+  }
+  
+  @keyframes pulseSoft {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.8; }
+  }
+}
